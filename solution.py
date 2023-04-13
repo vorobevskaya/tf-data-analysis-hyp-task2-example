@@ -9,7 +9,7 @@ def solution(x: np.array, y: np.array) -> bool:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     
-    p = anderson_ksamp([x, y]).pvalue
+    p = ks_2samp(x, y, alternative="two-sided").pvalue
     if p >= 0.06:
       result = bool(0)
     else:
